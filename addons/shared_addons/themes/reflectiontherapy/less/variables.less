@@ -30,9 +30,14 @@
 @purple:                #7a43b6;
 
 
+// Theme colors
+//---------------------------
+@themeGreen:			#51788f;
+@themeGray:				#efefef;
+
 // Scaffolding
 // -------------------------
-@bodyBackground:        @white;
+@bodyBackground:        @themeGray;
 @textColor:             @black;
 
 
@@ -44,7 +49,7 @@
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+@sansFontFamily:        "Proxima", "Helvetica Neue", Helvetica, Arial, sans-serif;
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
@@ -186,16 +191,16 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       @white;
-@navbarBackground:                @white;
-@navbarBorder:                    @white;
+@navbarBackgroundHighlight:       @themeGreen;
+@navbarBackground:                @themeGreen;
+@navbarBorder:                    @themeGreen;
 
 @navbarText:                      @black;
-@navbarLinkColor:                 @black;
-@navbarLinkColorHover:            @blue;
-@navbarLinkColorActive:           @gray;
+@navbarLinkColor:                 @white;
+@navbarLinkColorHover:            darken(@navbarBackground, 25%);
+@navbarLinkColorActive:           darken(@navbarBackground, 25%);
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+@navbarLinkBackgroundActive:      darken(@navbarBackground, 25%);
 
 @navbarBrandColor:                @navbarLinkColor;
 
