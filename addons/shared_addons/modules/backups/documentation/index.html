@@ -1,0 +1,142 @@
+<html doctype="html">
+<head>
+	<title>PyroBackup (1.6) Documentation</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1>PyroBackup Documentation</h1>
+			<sub>Last Updated: 7th April 2013</sub>
+		</header>
+		<hr />
+
+		<h3>Contents</h3>
+		<ul>
+			<li><a href="#intro">Introduction</a></li>
+			<li><a href="#requirements">Requirements</a></li>
+			<li><a href="#install">Installation</a></li>
+			<li><a href="#upgrade">Upgrading</a></li>
+			<li><a href="#terms">Terminology</a></li>
+			<li><a href="#getting_started">Getting Started</a></li>
+			<li><a href="#presets">Viewing A Preset's Information</a></li>
+			<li><a href="#accounts">Creating, Modifying &amp; Deleting Accounts</a></li>
+			<li><a href="#support">Support Requests, Feature Requests &amp; General Contact</a></li>
+		</ul>
+
+		<h3 id="intro">Introduction</h3>
+		Thank you for purchasing PyroBackup! PyroBackup is a powerful yet simple <a href="http://www.pyrocms.com" title="PyroCMS">PyroCMS</a> module which helps you and your users to quickly and easily setup and run backups of all your important data. With PyroBackup, you can give your backups (Presets) names and descriptions, pick certain database tables and easily swap the destination of your backups. PyroBackup currently supports the backup via/to the following methods:
+		<ul>
+			<li>Email</li>
+			<li>Amazon S3</li>
+			<li>Direct Download</li>
+			<li>Dropbox</li>
+		</ul>
+		To watch and overview of PyroBackup's features, please see the videos.
+
+		<h3 id="requirements">Requirements</h3>
+		In order to run PyroBackup, you will require the following:
+		<ul>
+			<li>Installation of <a href="http://www.pyrocms.com" title="PyroCMS">PyroCMS</a> v2.x</li>
+			<li>A copy of PyroBackup, available from the <a href="">PyroCMS Addons Store</a>.</li>
+		</ul>
+
+		<h3 id="install">Installation</h3>
+		To install PyroBackup, please follow the follow steps. 
+		<ol>
+			<li>With your copy of PyroBackup, ensure that the Zip file from the Addons store is named 'Backups.zip'</li>
+			<li>Login with your administrator account on your PyroCMS installation</li>
+			<li>From the Admin panel, select "Addons" from the top menu</li>
+			<li>Click on the "+ Upload" button in the top right.</li>
+			<li>Select the Backups.zip file from your hard drive and then press "Upload"</li>
+			<li>Your module should now be installed.</li>
+		</ol>
+		Now PyroBackup is installed, you can access it from under the "Content" dropdown menu at the top of the page.
+		<br /><br />
+		<iframe width="560" height="315" style="margin-left:20px;" src="http://www.youtube.com/embed/uNifUf4t1mE" frameborder="0" allowfullscreen></iframe>
+
+		<h3 id="upgrade">Upgrading</h3>
+		To upgrade the module, copy and replace all of the existing module files with those provided as part of this package. Next, visit your PyroCMS instllation, and browse to the Addons page in the Admin section. If there are no conflicts of versions, an Upgrade button should be visible for the module. Press this button to complete the updgrade. 
+
+		<h3 id="terms">Terminology</h3>
+		Here is some basic terminology that is used in the PyroBackup module.
+		<p></p>
+		<i><strong>Preset</strong></i><br />
+		A Preset is a saved configuration for a backup job. A Preset consists of a name, description, list of tables to backup and an optional account.
+
+		<p></p>
+		<i><strong>Account</strong></i><br />
+		An Account stores information about a particular backup method. The backup methods that are currently supported include Email, Dropbox and Amazon S3. A Preset can be linked to an Account, so that backups can be pushed automatically to these services.
+
+
+		<h3 id="getting_started">Getting Started</h3>
+		<br />
+		<iframe width="560" height="315" style="margin-left:20px;" src="http://www.youtube.com/embed/mCtLttGkMiA" frameborder="0" allowfullscreen></iframe>
+		<br /><br />
+		Lets run through a quick tutorial which will show you how to create a Preset and generate a Cron Job for this.
+		<ol>
+			<li>From the menu at the top of the page, under the Content section, select PyroBackup</li>
+			<li>In the shortcuts bar, click on "Add Preset"</li>
+			<li>Give the Preset a name to identify it from other Presets</li>
+			<li>Optionally give the Preset a description for your own personal reference</li>
+			<li>Pick which tables should be included</li>
+			<ol>
+				<li>Selecting "All Tables" will result in all tables in the DB at backup runtime to be included in the backup. As a result, if new tables exist at backup runtime, then these new tables will also be included in the backup.</li>
+				<li>Selecting "Specific Tables" result in a list of available tables being shown. If any of these tables are not available at backup runtime, then they will not be included. If new tables are added, they will not be automatically added. </li>
+				<li>Selecting "Tables With Prefix" will allow you to select all of the tables that have a specific prefix. This comes in handy if you are running multiple PyroCMS installations from the same database. Once you've specified your prefix (or multiple by comma-seperating them), PyroBackup will check each time the backup is run which tables have the prefix. This is feature is also useful if you do not want to explictely specify which tables to backup, whilst pulling them all.</li>
+			</ol>
+			<li>Pick the Backup Method</li>
+				<ol>
+					<li>Selecting "No Account" will mean that this Preset can only be run automatically and not part of a Cron Job</li>
+					<li>If you select an option under "Add Account" you will be required to enter the required account details for specified acocunt. For example if you select Amazon S3, you will be required to specify the Access Key, Secret Key, Bucket and optionally a path.</li>
+					<li>If you have previously made an Account or Preset with a new account, they will also be displayed. Selecting one of these will allow you to link more than one Preset to an Account.</li>
+				</ol>
+			<li>Click the "Save" button.</li>
+		</ol>
+		Once you have saved the new Preset, the module will then check what you have entered to ensure that it is all in the correct format that we require. If you have entered the credentials for a new account, we will also validate this account to ensure that we can connect to it. If any errors occur, you will be returned to the re-populated form and a message will be displayed alerting you to the error.
+		<p></p>
+		Once the form has validated successfully, your Preset will be saved and you will be shown the overview page for the Preset. On this page you can view and edit all of the information relating the Preset and the Account related (if applicable).
+		<p></p>
+		If you wish for your Preset to be run via a Cron Job, we provide you with a Cron Job Generator. The generator allows you to speciy the particular intevals at which you want the cron job to run, and it will generate the relevant row for you to add into your Crontab file. 
+		<p></p>
+		The Cron Job Generator provides you with two different methods of execution for the Crontab, which are via cURL and Wget. In order for the Backup script to be accessible to the crontab, each backup much specify both the unique ID of the Preset and  text string, as demonstrated below.
+		<p></p>
+		<code>http://mysite.com/backups/run/3/qQNL2iFdm9</code>
+		<p></p>
+		The unique code attached at the end of this URL is automatically generated by PyroBackups when the Preset is created. If this string is not specified, then the backup will not start. This is designed so that your Presets cannot be run without knowing the key.
+
+
+		<h3 id="presets">Viewing A Preset's Information</h3>
+		To view a Preset, click on the "Presets" link in the shortcut bar and click the "View" button next to the Preset that you would like to view the information of. From this page, you can see all of the information that is related to the Preset. 
+		<p />
+
+		<strong>Running / Downloading a Preset</strong>
+		<br />
+		On this page, two buttons that you are shown are labelled "Run Preset Now" and "Download". The "Run Preset Now" button will mean that this Preset will be run (like you would with a Cron Job) and the backup will go to the account that you have specified. 
+		<br />
+		The "Download" button however, will result in the backup being run, but instead of the backup going to a specified account, the backup will be downloaded in your browser.
+
+		<h3 id="accounts">Creating, Modifying &amp; Deleting Accounts</h3>
+		Apart from the ability to create an account whilst making a Preset, we also provide you with the ability to create and edit accounts in a seperatley. To view all of the Accounts, click on the "Accounts" link in the shortcuts bar.
+		<p />
+		<strong>Viewing Presets Linked To An Account</strong>
+		<br />To view any Presets which may be linked to an account, simply click on the account, and the list of Presets will be displayed below.
+		<p />
+		<strong>Adding An Account</strong>
+		<br />To add an Account, simply click on the "Add Account" link in the shortcuts bar. You will be presented with be preseted with all the required fields.
+		<p />
+		<strong>Editing An Account</strong>
+		<br />From the main Accounts page, click on the "Edit" button next to the Account that you would like to edit.
+		<p />
+		<strong>Deleting An Account</strong>
+		<br />To delete an Account, click the "Delete" button next to the Acccount that you would like to delete. If a Preset is linked to the account, the Preset will no longer be linked with an account, meaning that Cron Jobs will not complete.
+
+		<h3 id="support">Support Requests, Feature Requests &amp; General Contact</h3>
+		If you have any problems, suggestions, or would simply like to talk to us, please send an email to: <a href="mailto: support@nsawd.com">support@nsawd.com</a>
+
+		<p />&nbsp;<p />
+		<hr />
+		Copyright 2013 NSAWD - James Norman.
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+body
+{
+	font-family:Lucida Grande, Verdana, Geneva, Sans-serif;
+	font-size:13px;
+}
+
+#container
+{
+	max-width:960px;
+	margin:0 auto;
+	background:#fff;
+}
+
+h1
+{
+	font-size:19px;
+	color:#2E2E2E;
+	margin-bottom:5px;
+}
+
+h3
+{
+	background:#4A4A4A;
+	font-size:16px;
+	color:#EBEBEB;
+	padding:6px;
+	margin-bottom:5px;
+}
+
+sub
+{
+	font-size:11px;
+	color:#ccc;
+}
+
+hr
+{
+	background-color: #730F0F;
+	color:#730F0F;
+	border:1px solid #730F0F;
+}
+
+code
+{
+	margin-left:25px;
+}
+section
+{
+	background-color:;
+}
