@@ -5770,6 +5770,7 @@ input[type="submit"].btn.btn-mini {
 .navbar {
   overflow: visible;
   margin-bottom: 20px;
+  border-top: 1px solid #6992aa;
   *position: relative;
   *z-index: 2;
 }
@@ -7206,7 +7207,7 @@ a.badge:focus {
 }
 .hero-unit h1.slogan {
   color: #ffffff;
-  font-size: 84px;
+  font-size: 64px;
   font-weight: 100;
   margin-bottom: 30px;
 }
@@ -7219,8 +7220,13 @@ a.badge:focus {
   margin: 0 0 20px;
   border-left: 0px solid #eeeeee;
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 22px;
+}
+.hero-unit blockquote p {
+  font-size: 18px;
   font-style: italic;
+}
+.hero-unit blockquote cite {
+  font-size: 14px;
 }
 .pull-right {
   float: right;
