@@ -201,41 +201,9 @@ textarea {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-html,
-body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
-
-}
-/* Wrapper for page content to push down footer */
-.wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  /* Negative indent footer by it's height */
-
-  margin: 0px auto -60px;
-}
-/* Set the fixed height of the footer here */
-#push,
-#footer {
-  height: 60px;
-}
-#footer {
-  background-color: #f5f5f5;
-}
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
-  #footer {
-    margin-left: -20px;
-    margin-right: -20px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
 body {
   margin: 0;
-  font-family: "Proxima", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #000000;
@@ -647,10 +615,10 @@ h4,
 h5,
 h6 {
   margin: 10px 0;
-  font-family: inherit;
-  font-weight: bold;
+  font-family: "museo-slab", Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
   line-height: 20px;
-  color: inherit;
+  color: #36505f;
   text-rendering: optimizelegibility;
 }
 h1 small,
@@ -2696,10 +2664,10 @@ h4,
 h5,
 h6 {
   margin: 10px 0;
-  font-family: inherit;
-  font-weight: bold;
+  font-family: "museo-slab", Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
   line-height: 20px;
-  color: inherit;
+  color: #36505f;
   text-rendering: optimizelegibility;
 }
 h1 small,
@@ -2971,7 +2939,7 @@ input,
 button,
 select,
 textarea {
-  font-family: "Proxima", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 label {
   display: block;
@@ -4788,9 +4756,6 @@ button.close {
   -moz-border-radius: 4px;
   border-radius: 4px;
   *margin-left: .3em;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
 }
 .btn:hover,
 .btn:focus,
@@ -4903,17 +4868,17 @@ input[type="button"].btn-block {
 .btn-primary {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #047fdb;
-  background-image: -moz-linear-gradient(top, #049cdb, #0454db);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#049cdb), to(#0454db));
-  background-image: -webkit-linear-gradient(top, #049cdb, #0454db);
-  background-image: -o-linear-gradient(top, #049cdb, #0454db);
-  background-image: linear-gradient(to bottom, #049cdb, #0454db);
+  background-color: #000000;
+  background-image: -moz-linear-gradient(top, #000000, #000000);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#000000), to(#000000));
+  background-image: -webkit-linear-gradient(top, #000000, #000000);
+  background-image: -o-linear-gradient(top, #000000, #000000);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff049cdb', endColorstr='#ff0454db', GradientType=0);
-  border-color: #0454db #0454db #033790;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff000000', endColorstr='#ff000000', GradientType=0);
+  border-color: #000000 #000000 #000000;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #0454db;
+  *background-color: #000000;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -4925,12 +4890,12 @@ input[type="button"].btn-block {
 .btn-primary.disabled,
 .btn-primary[disabled] {
   color: #ffffff;
-  background-color: #0454db;
-  *background-color: #044bc2;
+  background-color: #000000;
+  *background-color: #000000;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #0341a9 \9;
+  background-color: #000000 \9;
 }
 .btn-warning {
   color: #ffffff;
@@ -5277,7 +5242,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #0454db;
+  background-color: #000000;
 }
 .btn-group.open .btn-warning.dropdown-toggle {
   background-color: #f89406;
@@ -5770,7 +5735,6 @@ input[type="submit"].btn.btn-mini {
 .navbar {
   overflow: visible;
   margin-bottom: 20px;
-  border-top: 1px solid #6992aa;
   *position: relative;
   *z-index: 2;
 }
@@ -5778,18 +5742,7 @@ input[type="submit"].btn.btn-mini {
   min-height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #51788f;
-  background-image: -moz-linear-gradient(top, #51788f, #51788f);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#51788f), to(#51788f));
-  background-image: -webkit-linear-gradient(top, #51788f, #51788f);
-  background-image: -o-linear-gradient(top, #51788f, #51788f);
-  background-image: linear-gradient(to bottom, #51788f, #51788f);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff51788f', endColorstr='#ff51788f', GradientType=0);
-  border: 1px solid #51788f;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
+  background-clip: #000000;
   *zoom: 1;
 }
 .navbar-inner:before,
@@ -5819,8 +5772,8 @@ input[type="submit"].btn.btn-mini {
   text-shadow: 0 1px 0 #51788f;
   background: url("../img/logo.png") no-repeat;
   background-position: center center;
-  height: 33px;
-  width: 300px;
+  height: 25px;
+  width: 220px;
   text-indent: -99999px;
 }
 .navbar .brand:hover,
@@ -5904,7 +5857,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: "Proxima", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -7186,13 +7139,15 @@ a.badge:focus {
   margin-bottom: 0;
 }
 .hero-unit {
-  padding: 60px;
+  padding: 96px 60px 25px 60px;
+  margin-top: 0px;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
   color: inherit;
   border-bottom: solid 1px #ffffff;
-  background-color: #eeeeee;
+  background: url("../img/hour-glass.jpg") no-repeat;
+  background-position: right top;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7200,6 +7155,7 @@ a.badge:focus {
 }
 .hero-unit h1 {
   margin-bottom: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 60px;
   line-height: 1;
   color: inherit;
@@ -7214,18 +7170,24 @@ a.badge:focus {
 .hero-unit li {
   line-height: 30px;
 }
-.hero-unit blockquote {
+.hero-unit blockquote,
+.hero-unit p {
   color: #ffffff;
   padding: 0 0 0 0px;
   margin: 0 0 20px;
   border-left: 0px solid #eeeeee;
-  font-family: Georgia, "Times New Roman", Times, serif;
-}
-.hero-unit blockquote p {
   font-size: 18px;
-  font-style: italic;
+  font-weight: 100;
+  font-style: normal;
+  font-family: "museo-slab", Georgia, "Times New Roman", Times, serif;
 }
-.hero-unit blockquote cite {
+.hero-unit blockquote p,
+.hero-unit p p {
+  font-size: 18px;
+  font-style: normal;
+}
+.hero-unit blockquote cite,
+.hero-unit p cite {
   font-size: 14px;
 }
 .pull-right {
@@ -7245,6 +7207,236 @@ a.badge:focus {
 }
 .affix {
   position: fixed;
+}
+/* The html and body elements cannot have any padding or margin. */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+.snap-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.snap-drawers {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+.snap-drawer {
+  position: absolute;
+  top: 0;
+  right: auto;
+  bottom: 0;
+  left: auto;
+  width: 265px;
+  height: auto;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+.snap-drawer-left {
+  left: 0;
+  z-index: 1;
+}
+.snap-drawer-right {
+  right: 0;
+  z-index: 1;
+}
+.snapjs-left .snap-drawer-right,
+.snapjs-right .snap-drawer-left {
+  display: none;
+}
+.snapjs-expand-left .snap-drawer-left,
+.snapjs-expand-right .snap-drawer-right {
+  width: 100%;
+}
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+
+  margin: 0px auto -120px;
+  background-color: #666664;
+}
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+  height: 120px;
+}
+#footer {
+  background-color: #666664;
+  border-top: 1px solid #7f7f7c;
+}
+#footer #poweredby {
+  color: #ffffff;
+}
+#footer #poweredby a {
+  color: #ffffff;
+}
+#footer #poweredby a hover {
+  color: #323232;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  #footer,
+  #wrap {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.navbar .description {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 100;
+  font-style: normal;
+  font-family: "museo-slab", Georgia, "Times New Roman", Times, serif;
+}
+#hourglass {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  min-height: 375px;
+  height: auto;
+  background: url('../img/hour-glass.jpg') top right;
+  background-size: cover;
+  z-index: 1;
+}
+#content {
+  position: relative;
+  z-index: 2;
+}
+/* !Sections */
+section#patients {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #e5e5e0;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25);
+}
+section#patients .bucket {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  max-width: 270px;
+  background-color: #ffffff;
+  -webkit-backface-visibility: none;
+  -moz-backface-visibility: none;
+  backface-visibility: none;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+section#patients .bucket img {
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+}
+section#patients .bucket h3 {
+  text-align: center;
+  color: #51788f;
+}
+section#patients .bucket p {
+  color: #51788f;
+  padding: 0 20px 10px 20px;
+}
+section#einstein {
+  padding: 60px;
+  background: url("../img/einstein.jpg") no-repeat;
+  background-position: center top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index: -1;
+}
+/* !PRIMARY Landscape phone to portrait tablet 
+----------------------------------------*/
+@media (max-width: 767px) {
+  /* Styles */
+  /* !Basic Page Styles
+  ------------------------------------ */
+  .hero-unit {
+    margin: -65px -20px 0px -20px;
+    padding: 60px 20px;
+    background-position: 93% top;
+  }
+  .hero-unit h1.slogan {
+    font-size: 40px;
+    text-align: center;
+  }
+  section#einstein {
+    padding: 20px;
+  }
+}
+/* !Mobile Devices Landscape Specific
+----------------------------------------*/
+@media (min-width: 480px) and (max-width: 767px) {
+  /* Styles */
+}
+/* !PRIMARY Landscape phones and down 
+---------------------------------------------------------------------*/
+@media (max-width: 480px) {
+  /* Styles */
+}
+/* !PRIMARY Portrait tablet to landscape and desktop 
+------------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 979px) {
+  /* Styles */
+}
+/* !iPads (portrait and landscape) 
+---------------------------------------------------------------------------------------*/
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Styles */
+}
+/* !iPads (landscape) 
+------------------------ */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* Styles */
+}
+/* !iPads (portrait)
+----------------------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* Styles */
+}
+/* !Slightly Wide Desktop Display
+------------------------------------*/
+@media (min-width: 980px) {
+  /* Styles */
+}
+/* !Large Desktop Displays 
+----------------------------------------*/
+@media (min-width: 1200px) {
+  /* Styles */
 }
 @-ms-viewport {
   width: device-width;
@@ -8298,68 +8490,13 @@ a.badge:focus {
     overflow: visible !important;
   }
 }
-/* !PRIMARY Landscape phone to portrait tablet 
-----------------------------------------*/
-@media (max-width: 767px) {
-  /* Styles */
-  /* !Basic Page Styles
-  ------------------------------------ */
-  .hero-unit {
-    margin: 0 -20px;
-    padding: 20px;
-  }
-  .hero-unit h1.slogan {
-    font-size: 60px;
-    text-align: center;
-  }
-}
-/* !Mobile Devices Landscape Specific
-----------------------------------------*/
-@media (min-width: 480px) and (max-width: 767px) {
-  /* Styles */
-}
-/* !PRIMARY Landscape phones and down 
----------------------------------------------------------------------*/
-@media (max-width: 480px) {
-  /* Styles */
-}
-/* !PRIMARY Portrait tablet to landscape and desktop 
-------------------------------------------------------*/
-@media (min-width: 768px) and (max-width: 979px) {
-  /* Styles */
-}
-/* !iPads (portrait and landscape) 
----------------------------------------------------------------------------------------*/
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */
-}
-/* !iPads (landscape) 
------------------------- */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* Styles */
-}
-/* !iPads (portrait)
------------------------ */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* Styles */
-}
-/* !Slightly Wide Desktop Display
-------------------------------------*/
-@media (min-width: 980px) {
-  /* Styles */
-}
-/* !Large Desktop Displays 
-----------------------------------------*/
-@media (min-width: 1200px) {
-  /* Styles */
-}
 /* !Retina Displays (Tip: Best used only for image replacement)
 ------------------------------------------------------------------ */
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 21), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) and (max-device-width: 1024px) {
   /* Styles */
   .navbar .brand {
     background: url("../img/logo@2x.png") no-repeat;
-    background-size: 300px 33px;
+    background-size: 220px 25px;
   }
 }
 /* !iPhone Retina Displays (Tip: Best used only for image replacement)

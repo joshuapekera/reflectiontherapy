@@ -1,14 +1,6 @@
 {{ theme:partial name="header" }}
-    <!--
-<div class="container">
-        <div class="row-fluid">
-            <div class="span12">
-                {{ session:messages success="success-box" notice="notice-box" error="error-box" }}
-            </div>
-        </div>
-    </div>
--->
-    {{ template:body }}
-
-      <hr />
+     <div id="wrap">
+	     {{ template:body }}
+	     <div id="push"></div>
+	 </div>
 {{ theme:partial name="footer" }}

@@ -16,20 +16,12 @@
 	<base href="{{ url:base }}"/>
 	<!-- End base -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ url:base }}/sitemap/xml" />
+    <!-- Fonts -->
+    <script type="text/javascript" src="//use.typekit.net/nwj5jep.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   	<!-- CSS. No need to specify the media attribute unless specifically targeting a media type, leaving blank implies media=all -->
     {{ theme:css file="style.css" }}
     {{ theme:css file="animate.css" }}
-	<style type="text/css">
-      /*
-body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-*/
-    </style>
   	<!-- End CSS-->
   	<!-- All JavaScript at the bottom, except for Modernizr. -->
   	{{ theme:js file="libs/modernizr.js" }}	
@@ -40,6 +32,8 @@ body {
     {{ theme:favicon rel="apple-touch-icon-precomposed" file="ico/apple-touch-icon-114-precomposed.png" }}
     {{ theme:favicon rel="apple-touch-icon-precomposed" file="ico/apple-touch-icon-72-precomposed.png" }}
     {{ theme:favicon rel="apple-touch-icon-precomposed" file="ico/apple-touch-icon-57-precomposed.png" }}
+    <!-- Place Holder Images - remove for production -->
+    <script src="addons/shared_addons/themes/reflectiontherapy/components/holderjs/holder.js"></script>
 </head>
 
 <body>
@@ -54,7 +48,8 @@ body {
           <a class="brand" href="{{ url:base }}">{{ settings:site_name }}</a>
           <div class="nav-collapse">
             <ul class="nav pull-right">
-              {{ navigation:links group="header" }}
+              <!-- {{ navigation:links group="header" }} -->
+              <span class="description">Providing Behavioral Healthcare</span>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
